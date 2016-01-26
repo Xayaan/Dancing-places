@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dancing Places</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog actual-form" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Found a new place to dance with others? Enter it here!</h4>
+      </div>
+      <div class="modal-body">
+				<br>
+				<h4>Basic Information</h4><br>
+				<div class="row">
+				  <div class="col-xs-12 col-md-6">
+				    <input type="text" class="main-form-input form-control" id="country-input" placeholder="Country">
+				  </div>
+					<div class="col-xs-12 col-md-6">
+						<input type="text" class="main-form-input form-control" id="city-input" placeholder="City">
+				  </div>
+				</div>
+			</br>
+				<div class="form-group">
+					<input type="text" class="form-control" id="address-input" placeholder="Enter a Valid Address Here...">
+				</div>
+				<div class="input-group">
+		      <div class="input-group-addon">$</div>
+		      <input type="text" class="form-control" id="cost-input" placeholder="Cost">
+		      <div class="input-group-addon">.00</div>
+		    </div><br>
+				<h4>Type of Dance</h4>
+				<div class="type-upper">
+					<h5 class="country-upper upper">Country</h5>
+					<h5 class="swing-upper upper">Swing</h5>
+					<h5 class="ballroom-upper upper">Ballroom</h5>
+					<h5 class="latin-upper upper">Latin</h5>
+					<h5 class="club-upper upper">Club</h5>
+				</div><br>
+				<div class="type-inner">
+				</div><br>
+
+				<h4>Minimum Dress Code</h4><br>
+				<select id="dress-input" class="form-control">
+					<option value="asyouare">Come As You Are</option>
+					<option value="casual">Casual</option>
+					<option value="pants">Pants and Nice Shirt</option>
+					<option value="suit">Suit and Tie</option>
+					<option value="tux">Tuxedo</option>
+				</select>
+
+				<div class="timing-selector">
+					<div class="upper-date"><br>
+						<h4>How often?</h4>
+					</div>
+
+					<div class="append-times row">
+					<div class="days col-xs-12 col-md-6">
+						<h5>Days</h5>
+						<div class="well well-sm">
+							<div class="checkbox"> <label> <input type="checkbox" name="days" value="everyday" onclick="all_check();" class="everyday">Everyday</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="days" value="saturday" class="all-days-one">Saturday</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="days" value="sunday" class="all-days-one">Sunday</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="days" value="monday" class="all-days-one">Monday</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="days" value="tuesday" class="all-days-one">Tuesday</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="days" value="wednesday" class="all-days-one">Wednesday</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="days" value="thursday" class="all-days-one">Thursday</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="days" value="friday" class="all-days-one">Friday</label></div>
+						</div>
+					</div>
+					<div class="months col-xs-12 col-md-6">
+						<h4>Months</h4>
+						<div class="well well-sm">
+							<div class="checkbox"> <label> <input type="checkbox" name="months" value="jan" class="all-months-one">January</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="months" value="feb" class="all-months-one">February</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="months" value="march" class="all-months-one">March</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="months" value="apr" class="all-months-one">April</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="months" value="may" class="all-months-one">May</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="months" value="jun" class="all-months-one">June</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="months" value="jul" class="all-months-one">July</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="months" value="aug" class="all-months-one">August</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="months" value="sept" class="all-months-one">September</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="months" value="oct" class="all-months-one">October</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="months" value="nov" class="all-months-one">November</label></div>
+							<div class="checkbox"> <label> <input type="checkbox" name="months" value="dec" class="all-months-one">December</label></div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="others"><br>
+				<h4>Optional Information</h4><br>
+				<div class="form-group">
+					<input type="text" class="main-form-input form-control" id="website-input" placeholder="Website URL"><br>
+					<input type="text" class="main-form-input form-control" id="facebook-input" placeholder="Facebook URL"><br>
+					<input type="text" class="main-form-input form-control" id="twitter-input" placeholder="Twitter URL"><br>
+					<input type="text" class="main-form-input form-control" id="meetup-input" placeholder="Meetup URL"><br>
+					<input type="text" class="main-form-input form-control" id="contact-input" placeholder="Contact Person Email"><br>
+					<input type="text" class="main-form-input form-control" id="additional-input" placeholder="Additional Notes">
+				</div>
+				</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary submit-dance">Submit for Review</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+	<div class="topbar"></div>
+	<div class="container">
+		<div class="row">
+			<div class="logo"><img class="logo-img" src="../static/img/logo.png"></div>
+  	</div>
+		<div id="mainlist">
+		<input type="text" class="search form-control" placeholder="Type Keywords Here and Press Enter ... ">
+		<ul class="dance-c fluid-container list">
+			{% if dances|length != 0 %}
+			{% for dance in dances %}
+					{% if dance.approved %}
+			    <li class="single-dance-item added-dance col-xs-12 col-md-3">
+						<div class="dance-item">
+							<p class="dance-type">{{dance.type_of_dance}}</p>
+							<p class="dance-location">{{dance.country}}, {{dance.city}}, {{dance.address}}</p>
+							{% if dance.dress_code == "asyouare" %}
+							<p class="dance-dress">Dress Code — <span>Come As You Are</span></p>
+							{% elif dance.dress_code == "pants"%}
+							<p class="dance-dress">Dress Code — <span>Pants and Nice Shirt</span></p>
+							{% elif dance.dress_code == "tux"%}
+							<p class="dance-dress">Dress Code — <span>Tuxedo</span></p>
+							{% elif dance.dress_code == "suit"%}
+							<p class="dance-dress">Dress Code — <span>Suit and Tie</span></p>
+							{% else %}
+							<p class="dance-dress">Dress Code — <span>Casual</span></p>
+							{% endif %}
+							<p class="dance-cost">Cost to Attend — $ <span>{{dance.cost}}</span></p>
+						</div>
+					</li>
+					{% endif %}
+			{% endfor %}
+			{% else %}
+			No dances :(
+			{% endif %}
+			<li class="single-dance-item added-dance col-xs-12 col-md-3">
+				<div class="dance-item" data-toggle="modal" data-target="#myModal">
+					<div class="modaltrig">+</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+	<div class="container">
+	<footer>
+		<hr>
+		<p>All Rights Reserved. <a href="/">Dancing Places, Inc.</a><p>
+	</footer>
+</div>
+</body>
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+<script src="../static/js/dashboard.js"></script>
+
+<script type="text/javascript">
+
+
+	var options = {
+		valueNames: [ 'dance-type', 'dance-location', 'dance-dress', 'dance-cost']
+	};
+	var hackerList = new List('mainlist', options);
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dancing Places</title>
+		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+	<div class="topbar"></div>
+
+	<div class="main-content" style="max-width: 500px; margin: 0 auto; border: 1px #DDD solid; padding: 20px; margin-top: 100px;">
+		<h3 style="text-align: center;">Log in to <a href="/">Dancing Places</a></h3>
+			<form id="login-form" action="" method="post" enctype="multipart/form-data">
+				<h4>{{error}}</h4><br>
+				<div class="input-group-lg signup-box"><br>
+				  {{ form.email(class="form-control", placeholder="Email", type="text")  }}
+				</div><br>
+				<div class="input-group-lg signup-box">
+				  {{ form.password(class="form-control", placeholder="••••••••", type="password")  }}
+				</div><br>
+				<button type="submit" class="btn btn-default btn-block btn-lg log-button">Log In</button>
+			</form>
+		<h3 class="do-more"><a href="/">Sign Up Here</a></h3>
+	</div>
+</body>
+</html>

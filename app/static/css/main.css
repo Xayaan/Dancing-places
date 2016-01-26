@@ -1,0 +1,112 @@
+body {
+	line-height: 1;
+	font-family: 'Montserrat';
+}
+
+input{
+	text-align: center;
+	border: 1px rgba(0,0,0,0.1) solid;
+}
+
+input:focus, button:focus{
+	outline: none;
+}
+
+.topbar{
+	height: 5px;
+	background: #97B1C0;
+	width: 100%;
+}
+
+.logo{
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 40px;
+}
+
+.logo-img{
+	max-width: 300px;
+}
+
+.dance-c{
+	margin: 80px 0px;
+	margin-left: -40px;
+}
+
+.single-dance-item{
+	list-style: none;
+	padding: 10px;
+}
+
+.dance-item{
+	border: 1px #DDD solid;
+	min-height: 190px;
+	min-width: 260px;
+	padding: 25px;
+}
+
+.dancetype{
+	color: #E27F20;
+	text-transform: uppercase;
+	font-size: 22px;
+}
+
+.dancelocation{
+	font-size: 16px;
+	margin: 10px 0px;
+	color: #9a9a9a;
+}
+
+.dancedress{
+}
+
+.dancedress span{
+	color: #BAAA83;
+}
+
+.dancecost span{
+	color: #BAAA83;
+}
+
+.dancecost{
+	margin: 10px 0px;
+}
+
+.search{
+	border-radius: 30px;
+	height: 40px;
+	max-width: 400px;
+	margin: 0 auto;
+	font-size: 13px;
+}
+
+footer{
+	margin-top: 100px;
+}
+
+.modaltrig{
+	padding: 20px 0px 0px 0px;
+	text-align: center;
+	font-size: 100px;
+}
+
+.actual-form{
+	z-index: 1050;
+}
+
+.upper{
+	padding: 10px;
+	background: #E27F20;
+	color: #FFF;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+
+.active-upper{
+	padding: 10px;
+	background: #BAAA83;
+	color: #000;
+	border-radius: 4px;
+	display: inline-block;
+}
